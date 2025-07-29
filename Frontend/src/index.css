@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.landing {
+  width: auto;
+  height: auto;
+  background-image: url("/public/weather/LandingBg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@theme {
+  --color-primary: #fff;
+  --color-accent: #efede3;
+  --color-primary-dark: #373539;
+}
+
+@layer components {
+  .card {
+    @apply w-full h-fit py-12 bg-accent dark:bg-gray-700 flex flex-col justify-center items-center rounded-2xl;
+  }
+  .TransactionCard {
+    @apply w-full h-fit p-3 bg-gray-700 text-white flex justify-between items-center rounded-2xl;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-[30px] lg:text-[40px] font-semibold;
+  }
+  h2 {
+    @apply text-[22px] lg:text-[32px] font-semibold;
+  }
+  p {
+    @apply text-[15px] lg:text-[20px] py-2;
+  }
+}
+
+.bg-clear {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/weather/Clear.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-snow {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/weather/Snow.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-Cloud {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/weather/Cloud.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-Rain {
+  width: 100%;
+  height: 100%;
+  background-image: url("weather/Rain.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-Default {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
