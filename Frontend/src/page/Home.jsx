@@ -2,14 +2,18 @@ import { useEffect, useState } from "react";
 //import axios from "axios";
 
 export const Home = () => {
-  const USDRATE = 0.012;
+  const USDRATE = 0.0134;
+  const EURRATE = 0.0157;
+  const CADRATE = 0.0969;
+  const GBPRATE = 0.0177;
+  const ETHRATE = 134;
 
   const [searchInput, setSearchInput] = useState(null);
   const [search, setSearch] = useState(null);
 
   const handleClick = (e) => {
     e.preventDefault();
-    const calc = Number((searchInput * (USDRATE * 1000)) / 1000);
+    const calc = Number((searchInput * (ETHRATE * 1000)) / 1000);
     setSearch(calc);
   };
 
