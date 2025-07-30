@@ -68,7 +68,7 @@ export const Home = () => {
             <input
               type="text"
               className="w-full p-3 rounded-2xl bg-accent text-black"
-              placeholder="Enter Currency"
+              placeholder="Enter Temp"
               onChange={(e) => setSearchInput1(e.target.value)}
             />
             <button
