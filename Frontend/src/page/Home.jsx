@@ -158,7 +158,7 @@ export const Home = () => {
                   Back
                 </button>
                 <button
-                  className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 disabled:opacity-50 "
+                  className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 disabled:opacity-50"
                   disabled={!isCompleted}
                   onClick={() => alert("Next clicked")}
                 >
