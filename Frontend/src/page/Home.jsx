@@ -6,7 +6,7 @@ export const Home = () => {
   const EURRATE = 0.0157;
   const CADRATE = 0.0969;
   const GBPRATE = 0.0177;
-  const ETHRATE = 0.0134;
+  const ETHRATE = 134;
 
   const [searchInput1, setSearchInput1] = useState(null);
   const [search1, setSearch1] = useState(null);
@@ -51,9 +51,9 @@ export const Home = () => {
         <div className="w-full h-full flex flex-col items-center">
           <div className="mt-10 w-[90%] h-[90%] m-5 p-5 flex flex-col items-center space-y-3 bg-white/5 backdrop-blur-2xl border-2 border-accent">
             <h1 className="">Currency Converter</h1>
-            <p className="">1 USD = 120ET</p>
+            <p className="">1 USD = 134ET</p>
             <h2 className="">
-              Eth - {searchInput} To USD - {search}
+              USD - {searchInput} To Eth - {search}
             </h2>
             <form
               action=""
@@ -63,7 +63,7 @@ export const Home = () => {
               <input
                 type="text"
                 className="w-full p-3 rounded-2xl bg-accent text-black"
-                placeholder="Enter Currency"
+                placeholder="Enter Currency in USD"
                 onChange={(e) => setSearchInput(e.target.value)}
               />
               <button
