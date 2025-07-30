@@ -27,8 +27,9 @@ export const Home = () => {
   return (
     <>
       <div
-        className={`w-full min-h-screen bg-gray-900 text-white flex flex-col items-center overflow-x-hidden`}
+        className={`w-full min-h-screen bg-gray-900 text-white flex items-center overflow-x-hidden`}
       >
+        <aside className="w-[100px] h-screen bg-gray-700"></aside>
         <div className="mt-10 w-[90%] h-[90%] p-5 flex flex-col items-center space-y-3 bg-white/5 backdrop-blur-2xl border-2 border-accent">
           <h1 className="">Currency Converter</h1>
           <p className="">1 USD = 120ET</p>
