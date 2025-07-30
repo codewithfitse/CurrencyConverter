@@ -14,8 +14,11 @@ export const Home = () => {
             <input
               type="text"
               className="w-full p-3 rounded-2xl bg-accent text-black"
+              placeholder="Enter Currency"
             />
-            <button className="p-3 rounded-[10px] bg-accent">Submit</button>
+            <button className="p-3 rounded-[10px] bg-accent text-black">
+              Submit
+            </button>
           </div>
         </div>
       </div>
