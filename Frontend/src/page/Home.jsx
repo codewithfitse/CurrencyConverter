@@ -24,61 +24,81 @@ export const Home = () => {
     const calc = Number((searchInput * (ETHRATE * 1000)) / 1000);
     setSearch(calc);
   };
+
+  const [toogle, setToogle] = useState(false);
+
+  function Toogle() {
+    setToogle(!toogle);
+  }
+
   return (
     <>
       <div
         className={`w-full min-h-screen bg-gray-900 text-white flex items-center overflow-x-hidden`}
       >
-        <aside className="w-[100px] h-screen bg-gray-700"></aside>
-        <div className="mt-10 w-[90%] h-[90%] p-5 flex flex-col items-center space-y-3 bg-white/5 backdrop-blur-2xl border-2 border-accent">
-          <h1 className="">Currency Converter</h1>
-          <p className="">1 USD = 120ET</p>
-          <h2 className="">
-            Eth - {searchInput} To USD - {search}
-          </h2>
-          <form
-            action=""
-            className="w-full flex justify-between items-center space-x-2"
-            onSubmit={handleClick}
+        <aside
+          className={`${
+            (toogle && "w-[300px]") || "w-[70px]"
+          } h-screen flex justify-center bg-gray-700`}
+        >
+          <button
+            className="mt-6 size-10 p-3 rounded-[10px] bg-gray-800"
+            onClick={Toogle}
           >
-            <input
-              type="text"
-              className="w-full p-3 rounded-2xl bg-accent text-black"
-              placeholder="Enter Currency"
-              onChange={(e) => setSearchInput(e.target.value)}
-            />
-            <button
-              type="submit"
-              className="p-3 rounded-[10px] bg-accent text-black"
+            T
+          </button>
+        </aside>
+        <div className="w-full h-full flex flex-col items-center">
+          <div className="mt-10 w-[90%] h-[90%] m-5 p-5 flex flex-col items-center space-y-3 bg-white/5 backdrop-blur-2xl border-2 border-accent">
+            <h1 className="">Currency Converter</h1>
+            <p className="">1 USD = 120ET</p>
+            <h2 className="">
+              Eth - {searchInput} To USD - {search}
+            </h2>
+            <form
+              action=""
+              className="w-full flex justify-between items-center space-x-2"
+              onSubmit={handleClick}
             >
-              Submit
-            </button>
-          </form>
-        </div>
-        <div className="mt-10 w-[90%] h-[90%] p-5 flex flex-col items-center space-y-3 bg-white/5 backdrop-blur-2xl border-2 border-accent">
-          <h1 className="">Temperature Converter</h1>
-          <p className="">1°C = 33.8°F</p>
-          <h2 className="">
-            C - {searchInput1} To F - {search1}
-          </h2>
-          <form
-            action=""
-            className="w-full flex justify-between items-center space-x-2"
-            onSubmit={handleClick1}
-          >
-            <input
-              type="text"
-              className="w-full p-3 rounded-2xl bg-accent text-black"
-              placeholder="Enter Temp"
-              onChange={(e) => setSearchInput1(e.target.value)}
-            />
-            <button
-              type="submit"
-              className="p-3 rounded-[10px] bg-accent text-black"
+              <input
+                type="text"
+                className="w-full p-3 rounded-2xl bg-accent text-black"
+                placeholder="Enter Currency"
+                onChange={(e) => setSearchInput(e.target.value)}
+              />
+              <button
+                type="submit"
+                className="p-3 rounded-[10px] bg-accent text-black"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+          <div className="mt-10 w-[90%] h-[90%] p-5 flex flex-col items-center space-y-3 bg-white/5 backdrop-blur-2xl border-2 border-accent">
+            <h1 className="">Temperature Converter</h1>
+            <p className="">1°C = 33.8°F</p>
+            <h2 className="">
+              C - {searchInput1} To F - {search1}
+            </h2>
+            <form
+              action=""
+              className="w-full flex justify-between items-center space-x-2"
+              onSubmit={handleClick1}
             >
-              Submit
-            </button>
-          </form>
+              <input
+                type="text"
+                className="w-full p-3 rounded-2xl bg-accent text-black"
+                placeholder="Enter Temp"
+                onChange={(e) => setSearchInput1(e.target.value)}
+              />
+              <button
+                type="submit"
+                className="p-3 rounded-[10px] bg-accent text-black"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </>
